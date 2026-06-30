@@ -20,10 +20,13 @@ python3.12 -m venv .venv
 ## Usage
 
 ```bash
-.venv/bin/python song_repeater.py beethoven.mp3
+.venv/bin/python song_repeater.py beethoven.mp3 --segment 120 --silence 120 --repeats 5
 ```
 
-This writes `beethoven_loop.mp3` next to the input.
+This plays the first 120 seconds of audio, then 120 seconds of silence,
+repeated 5 times, and writes `beethoven_loop.mp3` (a 20-minute file) next to the
+input. Those values are also the defaults, so `.venv/bin/python song_repeater.py
+beethoven.mp3` produces the same result.
 
 ### Options
 
